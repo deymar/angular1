@@ -46,7 +46,7 @@ console.log('mostrando '+this.nombre);
   var dos=15;
   if(uno ===8)
   { let uno:string="  desde el bloque";
-    alert("dentro del if"+uno);
+    console.log("dentro del if"+uno);
   }
  }
 /***********               */

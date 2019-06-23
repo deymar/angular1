@@ -1,3 +1,59 @@
-<p>
-  empleado works!
-</p>
+<div class=estilo>
+
+{{empleado}}
+
+</div>
+
+<div class=estilo2>
+
+    {{empleado2.nombre}}
+    <br>
+    {{empleado2.edad}}
+
+ </div>
+
+<br>
+
+ <div *ngIf="condicion == true" class=estilo3>
+        <button (click)="cambiarCondicion(false)">mostrar2</button>
+        {{empleados3[1].nombre}}
+    <li  *ngIf="empleados3[1].edad>20"  > MUESTRA  </li>
+    <li  *ngIf="empleados3[1].edad<=20"  > NO MUESTRA  </li>
+    <button (click)="aumentar()">AUMENTAR</button>
+    <button (click)="disminuir()">DISMINUIR</button>
+ </div>
+
+
+ <div *ngIf="condicion == false"     class=estilo>
+    <button (click)="cambiarCondicion(true)">mostrar1</button>
+    {{empleados3[2].nombre}}
+    {{empleados3[2].edad}}
+    
+ </div>
+
+<h3>LISTADO</h3>
+<div class="estilo2">
+    <li *ngFor="let empleado of empleados3 ; let i=index">
+        <h5>Empleado {{i+1}}: </h5>
+        <ul>
+               <li>{{empleado.nombre}}</li> 
+               <li>{{empleado.edad}}</li> 
+        </ul>
+
+    </li>
+</div>
+
+<hr>
+
+<div class="estilo">
+    <ul>
+    <h3>COLORES </h3>
+        <ul [ngSwitch]="color" >
+                <button (click)="cambiarColor('red')">Cambiar a rojo</button>
+                <button (click)="cambiarColor('brown')">Cambiar a brown</button>
+            <li *ngSwitchCase="'red'" [ngStyle]="{background:color}">ESo ROJO </li>
+            <li *ngSwitchCase="'brown'"[ngStyle]="{background:color}">ES brown</li>
+        </ul>
+    </ul>
+  
+</div>
