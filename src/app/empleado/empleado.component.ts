@@ -14,7 +14,7 @@ public empleados3:Array<Empleado>;  //array con la clase empleado
 public condicion:boolean;
 public color:string;
 
-
+public color_seleccionado_clase:string;
 
   constructor()
  { 
@@ -28,37 +28,45 @@ public color:string;
                  ];
   this.condicion=true;
   this.color="brown";
+
+  this.color_seleccionado_clase="purple";
  }
 
   ngOnInit()
    {
-    
     //console.log (this.empleado2);
     console.log(this.empleados3[1].edad);
 
    }
 
-        cambiarCondicion (valor)
-        {
-          this.condicion=valor;
+  cambiarCondicion (valor)
+  {
+    this.condicion=valor;
 
-        }
-        aumentar ()
-        {
-          this.empleados3[1].edad=   (this.empleados3[1].edad)+1;
-          console.log(this.empleados3[1].edad);
-        }
-        disminuir ()
-        {
-         this.empleados3[1].edad=   (this.empleados3[1].edad)-1;
-         console.log(this.empleados3[1].edad);
-        }
+  }
 
-        cambiarColor(valor2)
-        {
-         this.color=valor2;
-          console.log(this.color);
-        }
+  aumentar ()
+  {
+    this.empleados3[1].edad=   (this.empleados3[1].edad)+1;
+    console.log(this.empleados3[1].edad);
+  }
 
+  disminuir ()
+  {
+    this.empleados3[1].edad=   (this.empleados3[1].edad)-1;
+    console.log(this.empleados3[1].edad);
+  }
+
+  cambiarColor(valor2)
+  {
+    this.color=valor2;
+    console.log(this.color);
+  }
+
+  log_valor_clase()
+  {
+    this.color_seleccionado_clase;
+    console.log(this.color_seleccionado_clase);
+  }
 
 }

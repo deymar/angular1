@@ -57,3 +57,64 @@
     </ul>
   
 </div>
+
+
+<div class="estilo3">
+    <h3>PART TWO WAY DATA-BINDING</h3>
+    <strong>color elegido en la clase:  </strong>
+    <strong> <h2>{{color_seleccionado_clase}}</h2> </strong>
+    <br>
+
+    <input style="
+    position:absolute;
+    left:10px;
+    " type="text" 
+    [(ngModel)]="color_seleccionado_clase"/>
+
+
+    <div [ngStyle]="{'background':color_seleccionado_clase,
+                    'width':'200px',
+                    'height':'200px',
+                    'float':'right'
+                    }">
+    </div>
+
+    <button (click)="log_valor_clase()">
+            Boton para el log del color en clase
+    </button>
+</div>
+
+<div class=estilo4>
+                            
+    <div [style.border]="
+                    color_seleccionado_clase == 'red'?
+                        '5px solid black':
+                        '15px solid green'
+                       ">
+    
+                       <h3 >NG_STYLE con input red funciona</h3>
+    </div>   
+</div>
+
+<div class=estilo4>
+        <h3 >Class</h3>
+    <div [class.estilo2]=" color_seleccionado_clase == 'red' ">
+        Class en atributo
+        </div>   
+</div>
+
+<div class=estilo4>
+        
+    <div [ngClass]=" {
+                    clase_css_colorVerde: color_seleccionado_clase == 'green',
+                    clase_css_colorAmarillo: color_seleccionado_clase == 'yellow'  
+                     }">
+        <h3 >NG_CLASS   con green y yellow</h3>
+      
+        </div>   
+</div>
+
+
+
+
+

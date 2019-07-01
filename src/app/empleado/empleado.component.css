@@ -1,6 +1,7 @@
 .estilo {
 
 background-color: blue;
+width:200px;
 color:white;
 position: relative;
 top :250px;
@@ -9,6 +10,7 @@ top :250px;
 
 .estilo2 {
     background-color: green;
+    width:200px;
     color:white;
     position: relative;
     top :250px;
@@ -16,7 +18,34 @@ top :250px;
 
     .estilo3 {
         background-color: red;
+        width:200px;
+        height:200px;
         color:white;
         position: relative;
         top :250px;
+        left:25px;
         }
+
+        .estilo4 {
+            background-color: rgb(164, 164, 209);
+            width:250px;
+            
+            position: relative;
+            top:450px;
+            margin: 35px;
+
+            
+            }
+    
+
+.clase_css_colorVerde
+{
+background-color: green;
+
+}
+
+.clase_css_colorAmarillo
+{
+background-color:yellow;
+
+}
