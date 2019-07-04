@@ -13,7 +13,12 @@ const appRoutes: Routes = [
     {path: 'fruta', component: FrutaComponent },
   
     {path: 'home', component: HomeComponent },
-    {path: 'contacto', component: ContactoComponent }
+    {path: 'contacto', component: ContactoComponent },
+
+    ///RUTA CON UN PARAMETRO
+    {path: 'contacto/:page', component: ContactoComponent }
+    //////////////////////////////
+
 ];
 
 export const appRoutingProviders: any [] = [];

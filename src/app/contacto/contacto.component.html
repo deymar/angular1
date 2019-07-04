@@ -1,1 +1,12 @@
 <h2>{{titulo }}</h2>
+
+<h3 *ngIf="parametro"  >
+        holi 
+        {{parametro}} 
+ </h3>
+
+ <h3 *ngIf="!parametro"  >
+   <button (click)="redirigir('holi')">Ir a la pagina con parametro</button>
+
+</h3>
+
