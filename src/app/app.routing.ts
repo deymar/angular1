@@ -6,6 +6,7 @@ import {EmpleadoComponent} from './empleado/empleado.component';
 import {FrutaComponent}    from './fruta/fruta.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { FechaComponent } from './fecha/fecha.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent },
@@ -16,8 +17,9 @@ const appRoutes: Routes = [
     {path: 'contacto', component: ContactoComponent },
 
     ///RUTA CON UN PARAMETRO
-    {path: 'contacto/:page', component: ContactoComponent }
-    //////////////////////////////
+    {path: 'contacto/:page', component: ContactoComponent },
+    ////RUTA PARA EL COMPONENTE DE FECHA
+    {path: 'fecha', component: FechaComponent }
 
 ];
 
