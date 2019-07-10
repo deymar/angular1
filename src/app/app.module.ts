@@ -10,6 +10,7 @@ import { EmpleadoComponent } from './empleado/empleado.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { FechaComponent } from './fecha/fecha.component';
+import { FormularioComponent } from './formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FechaComponent } from './fecha/fecha.component';
     EmpleadoComponent,
     HomeComponent,
     ContactoComponent,
-    FechaComponent
+    FechaComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
