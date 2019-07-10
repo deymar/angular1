@@ -1,3 +1,72 @@
-<p>
-  formulario works!
-</p>
+<div class="formato">
+    <strong>  {{dato}}    </strong>
+
+  <form #formFormulario="ngForm" (ngSubmit)="onSubmit()"  >
+    <p>
+      <label >Nombre: </label>
+      <input type="text"
+             name="nombre"
+             #nombre="ngModel"
+             [(ngModel)]="formulario.nombre"
+             required
+      >
+
+      <span style="color:red;"
+        *ngIf="nombre.touched && !nombre.valid">
+        Error
+      </span>
+    </p>
+
+      <p>
+      <label >Caballeje: </label>
+      <input type="text"
+             name="caballaje"
+             #caballaje="ngModel"
+             [(ngModel)]="formulario.caballaje"
+             required pattern="[0-9]+"
+      >
+      <span style="color:red;"
+          *ngIf="caballaje.touched && !caballaje.valid">
+        Error
+      </span>
+      </p>
+
+      <p>
+      <label >Color: </label>
+      <input type="text"
+             name="color"
+             #color="ngModel"
+             [(ngModel)]="formulario.color"
+             required  pattern="[a-zA-Z#]+"
+      >
+
+        <span style="color:red;"
+              *ngIf="color.touched && !color.valid">
+        Error
+      </span>
+
+      </p>
+
+    <input type="submit" value="Guardar" [disabled]="!formFormulario.valid" >
+
+  </form>
+
+
+ </div>
+
+
+<div>
+  <h4>Listado de coches</h4>
+  <ul>
+    <li *ngFor="let coche2 of formulario2">
+      {{coche2.nombre}} - {{coche2.caballaje}} - {{coche2.color}}
+    </li>
+
+  </ul>
+
+</div>
+
+
+
+
+

@@ -7,7 +7,7 @@ import {FrutaComponent}    from './fruta/fruta.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { FechaComponent } from './fecha/fecha.component';
-
+import { FormularioComponent } from './formulario/formulario.component';
 const appRoutes: Routes = [
     {path: '', component: HomeComponent },
     {path: 'empleado', component: EmpleadoComponent },
@@ -19,7 +19,8 @@ const appRoutes: Routes = [
     ///RUTA CON UN PARAMETRO
     {path: 'contacto/:page', component: ContactoComponent },
     ////RUTA PARA EL COMPONENTE DE FECHA
-    {path: 'fecha', component: FechaComponent }
+    {path: 'fecha', component: FechaComponent },
+    {path: 'formulario', component: FormularioComponent }
 
 ];
 
