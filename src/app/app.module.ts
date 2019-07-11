@@ -12,6 +12,10 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { FechaComponent } from './fecha/fecha.component';
 import { FormularioComponent } from './formulario/formulario.component';
 
+//importando el http
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +29,8 @@ import { FormularioComponent } from './formulario/formulario.component';
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
