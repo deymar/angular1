@@ -1,7 +1,8 @@
 <div class="formato">
     <strong>  {{dato}}    </strong>
 
-  <form #formFormulario="ngForm" (ngSubmit)="onSubmit()"  >
+  <form #formFormulario="ngForm" (ngSubmit)="onSubmit();
+      formFormulario.reset()">
     <p>
       <label >Nombre: </label>
       <input type="text"
